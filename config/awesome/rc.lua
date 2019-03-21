@@ -85,7 +85,7 @@ local themes = {
     "vertex",          -- 10
 }
 
-local chosen_theme = themes[5]
+local chosen_theme = themes[4]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "urxvtc"
@@ -96,7 +96,7 @@ local guieditor    = "atom"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "1" } -- , "2", "3", "4", "5" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
