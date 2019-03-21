@@ -1,9 +1,10 @@
 XTerm.termname: xterm-256color
 XTerm.vt100.locale: true
-XTerm.vt100.reverseVideo: true
+! XTerm.vt100.reverseVideo: true
 
-XTerm.vt100.faceName: DejaVu Sans Mono:size=12:antialias=false
-XTerm.vt100.font: 7x13
+XTerm*faceName: DeJaVu Sans Mono
+XTerm*faceSize: 10
+XTerm*renderFont: true
 
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
