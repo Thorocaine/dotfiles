@@ -1,0 +1,3 @@
+XTerm.termname: xterm-256color
+XTerm.vt100.locale: true
+XTerm.vt100.reverseVideo: true
