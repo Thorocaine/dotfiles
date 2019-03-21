@@ -3,8 +3,7 @@
 #Liquid Prompt
 cd ~/.dotfiles
 git clone https://github.com/nojhan/liquidprompt.git
-source liquidprompt/liquidprompt
-ln -s ~/.dotfiles/liquidprompt/liquidpromptrc-dist ./config/liquidpromptrc
+source ~/.dotfiles/liquidprompt/liquidprompt
 
 #Sym Links
 ln -s ~/.dotfiles/config ~/.config
