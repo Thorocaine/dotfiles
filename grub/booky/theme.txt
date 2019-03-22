@@ -27,13 +27,6 @@ terminal-border: "0"
     highlight_style = "progress_bar/progress_bar_hl_*.png"
 }
 
-# background
-#+ image {
-#	top = 0
-#	left = 0
-#    file = "back.png"
-#}
-
 #boot menu
 + boot_menu {
 	left = 50%-150
@@ -53,10 +46,19 @@ terminal-border: "0"
 	scrollbar = false
 }
 
-#help bar at the bottom
+# background
 + image {
-	top = 100%-56
-	left = 50%-175
-    file = "help_bar.png"
+	top = 0
+	left = 0
+	file = "back.png"
+}
+
+#help bar at the bottom
+#+ image {
+#	top = 100%-56
+#	left = 50%-175
+#    file = "help_bar.png"
+#}
+
 }
 
