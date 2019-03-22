@@ -1,0 +1,19 @@
+#IMAP
+set imap_user = "jonathan@igovernance.co.za"
+set imap_pass = "<PASSWORD>"
+
+#SMTP
+set smtp_url = "smtp://foo@smtp.gmail.com:587/"
+set smtp_pass = "<PASSWORD>"
+
+#FROM
+set from = "jonathan@igovernance.co.za"
+set realname = "Jonathan Peel"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+
+set header_cache = ~/.mutt/igs/cache/headers
+set message_cachedir = ~/.mutt/igs/cache/bodies
+set certificate_file = ~/.mutt/igs/certificates

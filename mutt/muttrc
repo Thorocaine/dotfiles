@@ -1,0 +1,37 @@
+# Folder hooks
+folder-hook 'account.me' 'source ~/.mutt/account.me'
+folder-hook 'account.igs' 'source ~/.mutt/account.igs'
+
+# Default account
+source ~/.mutt/account.me
+
+# Macros for switching accounts
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/account.me<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/account.igs<enter><change-folder>!<enter>'
+
+# Fetch mail shortcut
+bind index G imap-fetch-mail
+set imap_keepalive = 900
+
+set editor = "vim"
+set imap_check_subscribed
+set mail_check = 120
+
+set sort=threads
+set sort_aux = reverse-last-date-received  # like gmail
+set sort_aux = reverse-last-date-received  # like gmailil set date_format = "%m/%d/%t" = "+[GMail]/Drafts"
+
+# Side bar
+set sidebar_width=24
+set sidebar_visible=yes
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+
+# Donedebar-open
+set sidebar_width=24
+set sidebar_visible=yes
+# set sidebar_delim='|'	
