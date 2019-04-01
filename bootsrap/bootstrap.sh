@@ -16,5 +16,6 @@ cp ~/.dotfiles/mutt/template.me ~/.dotfiles/mutt/account.igs
 ln -s ~/.dotfiles/config     ~/.config
 ln -s ~/.dotfiles/bashrc     ~/.bashrc
 ln -s ~/.dotfiles/mutt       ~/.mutt
+ln -s ~/.dotfiles/vimrc      ~/.vimrc
 ln -s ~/.dotfiles/Xresources ~/.Xresources
 ln -s ~/.dotfiles/xinitrc    ~/.xinitrc
