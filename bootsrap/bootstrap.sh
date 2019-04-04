@@ -12,10 +12,13 @@ source ~/.dotfiles/liquidprompt/liquidprompt
 cp ~/.dotfiles/mutt/template.igs ~/.dotfiles/mutt/account.igs
 cp ~/.dotfiles/mutt/template.me ~/.dotfiles/mutt/account.igs
 
+#space-vim
+rm -rf ~/.SpaceVim.d
+
 #Sym Links
 ln -s ~/.dotfiles/config     ~/.config
 ln -s ~/.dotfiles/bashrc     ~/.bashrc
 ln -s ~/.dotfiles/mutt       ~/.mutt
-ln -s ~/.dotfiles/vimrc      ~/.vimrc
+ln -s ~/.dotfiles/SpaceVim.d ~/.SpaceVim.d
 ln -s ~/.dotfiles/Xresources ~/.Xresources
 ln -s ~/.dotfiles/xinitrc    ~/.xinitrc
