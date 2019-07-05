@@ -1,13 +1,8 @@
 # Folder hooks
-folder-hook 'account.me' 'source ~/.mutt/account.me'
-folder-hook 'account.igs' 'source ~/.mutt/account.igs'
+folder-hook 'account.yandex' 'source ~/.mutt/account.yandex'
 
 # Default account
-source ~/.mutt/account.me
-
-# Macros for switching accounts
-macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/account.me<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/account.igs<enter><change-folder>!<enter>'
+source ~/.mutt/account.yandex
 
 # Fetch mail shortcut
 bind index G imap-fetch-mail
