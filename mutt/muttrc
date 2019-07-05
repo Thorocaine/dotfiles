@@ -29,4 +29,12 @@ bind pager \CO sidebar-open
 # Donedebar-open
 set sidebar_width=24
 set sidebar_visible=yes
+<<<<<<< HEAD
 # set sidebar_delim='|'	
+=======
+# set sidebar_delim='|'
+
+source ~/.dotfiles/mutt/dracula.muttrc
+
+#	
+>>>>>>> 30efaf08b504fa7f758b10cdeef9e39f6da6d474
