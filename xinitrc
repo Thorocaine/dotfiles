@@ -1,2 +1,2 @@
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-exec awesome
+exec i3
