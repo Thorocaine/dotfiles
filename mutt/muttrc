@@ -1,0 +1,31 @@
+set ssl_starttls=yes
+set ssl_force_tls=yes
+source ./secure/work.mutt
+set realname='Jonathan Peel'
+set folder = imaps://imap.gmail.com/
+set spoolfile = +INBOX
+set postponed="+[Gmail]/Drafts"
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set smtp_url = 'smtps://jonathan@igovernance.co.za@smtp.gmail.com:465/'
+set move = no
+set imap_keepalive = 900
+set editor='vim'
+
+set sidebar_visible
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_width=10
+mailboxes +INDEX
+mailboxes +[Gmail]/Drafts
+bind index,pager <DOWN> sidebar-next
+bind index,pager <UP> sidebar-prev 
+bind index,pager <ENTER> sidebar-open
+bind index,pager <RETURN> sidebar-open
+
+set sort=threads
+set sort_aux=reverse-date
+set index_format = "[%Z] %?X?A&-? %D  %-20.20F  %s"
+set collapse_all = yes
+set uncollapse_new = no
