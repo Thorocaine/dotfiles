@@ -1,6 +1,6 @@
 set ssl_starttls=yes
 set ssl_force_tls=yes
-source ./secure/work.mutt
+source ~/.mutt/secure/work.mutt
 set realname='Jonathan Peel'
 set folder = imaps://imap.gmail.com/
 set spoolfile = +INBOX
@@ -29,3 +29,6 @@ set sort_aux=reverse-date
 set index_format = "[%Z] %?X?A&-? %D  %-20.20F  %s"
 set collapse_all = yes
 set uncollapse_new = no
+
+source ~/.mutt/solarized.mutt
+
