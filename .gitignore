@@ -1,4 +1,5 @@
 liquidprompt
 mutt/account.*
-mutt/me/cache
-mutt/cache
+mutt/me/cache/*
+mutt/cache/*
+config/nvim/plugged/*
