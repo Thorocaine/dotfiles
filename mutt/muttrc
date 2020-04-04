@@ -17,8 +17,15 @@ set sidebar_visible
 set sidebar_short_path
 set sidebar_folder_indent
 set sidebar_width=10
-mailboxes +INDEX
+mailboxes +INBOX
+mailboxes +[Gmail]/Starred
 mailboxes +[Gmail]/Drafts
+mailboxes '+[Gmail]/All Mail'
+mailboxes +[Gmail]/Bin
+set mail_check_stats
+set sidebar_short_path
+set sidebar_delim_chars="/"
+set sidebar_indent_string=" "
 bind index,pager <DOWN> sidebar-next
 bind index,pager <UP> sidebar-prev 
 bind index,pager <ENTER> sidebar-open
@@ -32,3 +39,23 @@ set uncollapse_new = no
 
 source ~/.mutt/solarized.mutt
 
+bind editor <space> noop
+set alias_file        = '~/.mutt/aliases.txt'
+set copy              = no
+set display_filter    = '$HOME/.mutt/aliases.sh'
+set edit_headers
+set editor            = "vim +/^$ ++1"
+set mail_check        = 5
+set move              = no
+
+# Gmail-style keyboard shortcuts
+bind index g noop
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gt "<change-folder>=[Gmail]/Bin<enter>" "Go to trash"
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+bind  index d delete-message
+bind  index D delete-thread
+macro pager d '<delete-message><exit>'
