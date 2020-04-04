@@ -16,12 +16,11 @@ set editor='vim'
 set sidebar_visible
 set sidebar_short_path
 set sidebar_folder_indent
-set sidebar_width=10
+set sidebar_width=20
 mailboxes +INBOX
 mailboxes +[Gmail]/Starred
 mailboxes +[Gmail]/Drafts
 mailboxes '+[Gmail]/All Mail'
-mailboxes +[Gmail]/Bin
 set mail_check_stats
 set sidebar_short_path
 set sidebar_delim_chars="/"
