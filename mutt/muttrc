@@ -20,6 +20,7 @@ set sidebar_width=20
 mailboxes +INBOX
 mailboxes +[Gmail]/Starred
 mailboxes +[Gmail]/Drafts
+mailboxes +[Gmail]/Spam
 mailboxes '+[Gmail]/All Mail'
 set mail_check_stats
 set sidebar_short_path
