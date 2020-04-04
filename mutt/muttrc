@@ -31,10 +31,15 @@ bind index,pager <ENTER> sidebar-open
 bind index,pager <RETURN> sidebar-open
 
 set sort=threads
-set sort_aux=reverse-date
+set strict_threads = yes
+set sort_browser="reverse-date"
+set sort_aux="reverse-last-date-received"
 set index_format = "[%Z] %?X?A&-? %D  %-20.20F  %s"
 set collapse_all = yes
+unset collapse_unread
 set uncollapse_new = no
+bind index - collapse-thread
+bind index _ collapse-all
 
 source ~/.mutt/solarized.mutt
 
