@@ -1,16 +1,26 @@
-export PATH=$HOME/bin:$PATH
-export ZSH="/home/me/.dotfiles/oh-my-zsh"
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/me/.zshrc'
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="bira"
-HIST_STAMPS="yyyy-mm-dd"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
-# User configuration
-export LANG=en_US.UTF-8
-export EDITOR='vim'
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
 
-alias mutt=neomutt
-alias vi=nvim
-alias vim=nvim
+
+#ZSH_THEME=robbyrussell
