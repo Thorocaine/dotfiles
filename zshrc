@@ -22,5 +22,11 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+export PATH="$PATH:$HOME/bin"
+
+#enable scroll lock
+xmodmap -e 'add mod3 = Scroll_Lock'
 
 #ZSH_THEME=robbyrussell

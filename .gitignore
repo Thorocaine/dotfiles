@@ -3,3 +3,4 @@ mutt/account.*
 mutt/me/cache/*
 mutt/cache/*
 config/nvim/plugged/*
+zsh/cache
