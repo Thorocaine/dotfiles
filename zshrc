@@ -20,6 +20,10 @@ fi
 # Use manjaro zsh prompt
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
+else
+  export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="af-magic"
+  source $ZSH/oh-my-zsh.sh
 fi
 
 export DOTNET_ROOT=$HOME/.dotnet
@@ -30,10 +34,18 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 
 #enable scroll lock
-#xmodmap -e 'add mod3 = Scroll_Lock'
 
 #ZSH_THEME=robbyrussell
 source /usr/share/nvm/init-nvm.sh
 colorscript -r
 
 alias dps="docker ps --all --format \"table {{.Names}}\t{{.Status}}\t{{.Ports}}\""
+
+
+
+
+
+
+
+
+
