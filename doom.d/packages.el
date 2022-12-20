@@ -10,6 +10,8 @@
 ;(package! some-package)
 (package! org-pretty-tags)
 (package! visual-fill-column)
+(package! ox-hugo)
+(package! org-roam-ui)
 
 
 ;; To install a package directly from a remote git repo, you must specify a

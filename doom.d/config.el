@@ -3,14 +3,12 @@
 (setq user-full-name "Jonathna Peel"
       user-mail-address "me@jonathanpeel.co.za")
 
-(setq doom-font (font-spec :family "Noto Sans Mono" :size 15 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Noto Sans Mono" :size 19))
+(setq doom-font (font-spec :family "Fira Mono" :size 16 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 19))
 
 (setq doom-theme 'doom-dracula)
 
 (setq display-line-numbers-type t)
-
-(add-hook 'emacs-startup-hook 'toggle-frame-maximized)
 
 (server-start)
 
@@ -68,12 +66,14 @@
          (quote
           (
            ("CLR"   . "☀")
+           ("DZ"    . "🌦")
+           ("RA"    . "🌧")
+           ("TS"    . "⛈")
+           ("TSRA"  . "⛈")
+           ("SN"    . "🌨")
            ("SCT"   . "🌤")
            ("BKN"   . "🌤")
            ("OVC"   . "☁")
-           ("RA"    . "🌧")
-           ("SN"    . "🌨")
-           ("TS"    . "⛈")
 
            ("dev"  . "💻")
            ("del"  . "🚚")
@@ -86,21 +86,25 @@
                 )))
    (org-pretty-tags-global-mode))
 
+(setq org-todo-keyword-faces
+  '(("MEET" . "#E35DBF")
+    ("PLAN" . "4d4d4d")
+    ("CANCELED" . (:foreground "white" :background "#4d4d4d" :weight bold))
+    ("POSTPONED" . "#008080")))
+
 (after! org-roam
   (setq org-roam-directory (concat org-directory "/roam"))
-  (setq org-roam-completion-everywhere t)
+  (setq org-roam-completion-everywhere t))
+
+(defvar zmy-location-tag-options "@%^{LOCATION|Krasnodar|Adler}")
+(defvar zmy-wether-tag-options "%^{WEATHER|CLR|DZ|RA|TS|TSRA|SN|SCT|BKN|OVC|BR|}")
+(defvar zmy-tags (concat ":" zmy-location-tag-options ":" zmy-wether-tag-options ":"))
+(defvar zmy-dailys-entry-template (concat "* %T " zmy-tags " \n%?"))
 
 (setq org-roam-dailies-capture-templates
-        '(("d" "Journal" entry "* %<%H:%M>\t:%^{WEATHER|CLR|SCT|BKN|OVC|RA|SN|TS|}:\n \n%?"
-        :if-new (file+head+olp "%<%Y-w%V>.org"
-                               ":PROPERTIES:
-:ROAM_ALIASES: %<%Y-w%V>
-:END:
-#+title: %<%Y>, week %<%V>
-#+author: Jonathan Peel
-#+filetags: :@%^{LOCATION|Krasnodar|Adler}:journal:%<%Y:w%V:>"
-                               ("[%<%F>] \t:%<%B:%A>:"))
-        :empty-lines 1)))
-)
+      `(("d" "Journal" entry ,zmy-dailys-entry-template
+         :target (file+datetree "%<%Y>.org" ""))))
 
-(setq org-roam-db-gc-threshold most-positive-fixnum)
+(setq org-plantuml-jar-path "/home/me/bin/plantuml.jar")
+(setq org-plantuml-default-exec-mode 'executable)
+(setq plantuml-default-exec-mode 'executable)
